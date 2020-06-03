@@ -1,3 +1,8 @@
-import"./style.css";
+// import"./style.css";
+import "./sass/sass.scss"
 
-console.log("ok");
+
+var obj =  require('./cal');
+
+console.log(obj.cal(10));
+console.log(obj.name);
