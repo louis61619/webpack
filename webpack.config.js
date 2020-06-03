@@ -3,6 +3,7 @@ const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
+
 module.exports = {
     mode:'development',
   entry: './src/index.js', // 入口文件
@@ -10,6 +11,16 @@ module.exports = {
     path: path.resolve(__dirname, 'dist'),
     filename: '[name].bundle.js'
   }, // 出口文件
+
+
+  
+    //...
+    devServer: {
+      contentBase: path.join(__dirname, 'dist'),
+      compress: true,
+      port: 8000
+    },
+  
 
   //loader
   module: {
